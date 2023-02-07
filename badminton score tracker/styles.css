@@ -5,3 +5,28 @@
 .loser {
     color: red;
 }
+
+.display-1 {
+    font-size: 3em;
+}
+
+.container {
+    display: flexbox;
+    width: 500px;
+    height: 500px;
+    background-color: #ecf0f1;
+    margin-top: 50px;
+    border-radius: 1em;
+}
+
+.playerbuttons {
+    margin-top: 1em;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.col {
+    padding: 0.3em;
+}

@@ -14,26 +14,63 @@
 <body>
 
     <div class="container">
-        <div class="title">
-            <h2>Badminton Score Keeper</h2>
-        </div>
 
-        <div class="score">
-            <h1><span id="p1Display">0</span> : <span id="p2Display">0</span></h1>
-        </div>
 
-        <div class="score control">
-            <button id="p1Button">+1 Player One</button>
-            <button id="p2Button">+1 Player Two</button>
-            <button id="reset">Reset</button>
+
+        <div class="row">
+
+            <div class="title">
+                <h2 class="display-1 text-center text-primary">Badminton Score Keeper</h2>
+            </div>
+
         </div>
 
 
-        <select name="" id="playto">
-            <option value="11">11</option>
-            <option value="15">15</option>
-            <option value="21">21</option>
-        </select>
+        <div class="row">
+            <div class="badmintonimage">
+                <img src="https://img.olympicchannel.com/images/image/private/t_twitter_share_thumb/f_auto/primary/ybf4bxkp9jbccxxxg3kx"
+                    alt="" class="img-fluid rounded">
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="score">
+                <h1><span id="p1Display">0</span> : <span id="p2Display">0</span></h1>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-center">
+            <select name="" id="playto" class="form-select">
+                <option selected>Set the Score!</option>
+                <option value="11">11</option>
+                <option value="15">15</option>
+                <option value="21">21</option>
+            </select>
+
+        </div>
+
+        <div class="playerbuttons">
+            <div class="row">
+
+                <div class="col">
+                    <button id="p1Button" class="btn btn-primary btn-block" type="button">+1 Player One</button>
+                </div>
+                <div class="col">
+                    <button id="p2Button" class="btn btn-primary btn-block" type="button">+1 Player Two</button>
+                </div>
+                <div class="col">
+                    <button id="reset" class="btn btn-secondary btn-block" type="button">Reset</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
 
     </div>
 
