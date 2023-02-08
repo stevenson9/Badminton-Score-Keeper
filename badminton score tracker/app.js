@@ -11,7 +11,7 @@ const playTo = document.querySelector("#playto");
 
 let p1Score = 0;
 let p2Score = 0;
-let winningScore = false;
+let winningScore = 11;
 
 
 
