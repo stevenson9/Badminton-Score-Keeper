@@ -11,12 +11,14 @@ const playTo = document.querySelector("#playto");
 
 let p1Score = 0;
 let p2Score = 0;
-let winningScore = 11;
+let winningScore = false;
+
+
 
 let isGameOver = false;
 
 
-b1.addEventListener("click", function() {
+b1.addEventListener("click", function () {
 
     if (!isGameOver) {
         p1Score += 1;
@@ -24,15 +26,19 @@ b1.addEventListener("click", function() {
             isGameOver = true;
             p1Display.classList.add('winner')
             p2Display.classList.add('loser')
+            b1.toggleAttribute("disabled")
+            b2.toggleAttribute("disabled")
         }
 
         p1Display.textContent = p1Score;
- 
+
     }
+
+
 
 })
 
-b2.addEventListener("click", function() {
+b2.addEventListener("click", function () {
 
     if (!isGameOver) {
         p2Score += 1;
@@ -41,11 +47,15 @@ b2.addEventListener("click", function() {
             isGameOver = true;
             p2Display.classList.add('winner')
             p1Display.classList.add('loser')
+            b1.toggleAttribute("disabled")
+            b2.toggleAttribute("disabled")
         }
         p2Display.textContent = p2Score;
-        
- 
+
+
     }
+
+
 })
 
 function resetScore() {
@@ -57,17 +67,33 @@ function resetScore() {
     p2Display.textContent = 0;
     p1Display.classList.remove('winner', 'loser')
     p2Display.classList.remove('loser', 'winner')
+
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
     resetScore();
-    
+    b1.toggleAttribute("disabled", "")
+    b2.toggleAttribute("disabled", "")
+
 })
 
-playTo.addEventListener("change", function() {
+playTo.addEventListener("change", function () {
+    
 
-    winningScore = parseInt(this.value);
-    resetScore();
+    if (!isGameOver) {
+        winningScore = parseInt(this.value);
+        resetScore();
+
+
+
+    } else {
+        winningScore = parseInt(this.value);
+        resetScore();
+        b1.toggleAttribute("disabled")
+        b2.toggleAttribute("disabled")
+    }
+
+
 })
 
 

@@ -1,13 +1,14 @@
 .winner {
-    color: green;
+    color: #2ecc71;
 }
 
 .loser {
-    color: red;
+    color: #c0392b;
 }
 
 .display-1 {
-    font-size: 3em;
+    font-size: 2.5em;
+    font-weight: 400;
 }
 
 .container {
@@ -19,14 +20,22 @@
     border-radius: 1em;
 }
 
-.playerbuttons {
-    margin-top: 1em;
-    margin-bottom: 0px;
-    border-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
 
 .col {
-    padding: 0.3em;
+    padding: 0.5em;
+    margin-top: 0.3em;
 }
+
+#p1Display {
+    font-size: 1.5em;
+}
+
+
+#p2Display {
+    font-size: 1.5em;
+}
+
+.colon {
+    font-size: 1.5em;
+}
+
